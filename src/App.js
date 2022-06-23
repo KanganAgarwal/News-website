@@ -8,7 +8,7 @@ const [news,setNews]=useState([])
   
  useEffect(() => {
   const getContent=async()=>{
-    const res=await fetch(`https://newsapi.org/v2/top-headlines?category=${categorySelected}&language=en&apiKey=a1aa88bccdc24c20952df47ef92003f0`);
+    const res=await fetch(`https://newsapi.org/v2/top-headlines?category=${categorySelected}&language=en&apiKey=${process.env.API_KEY}`);
      const data=await res.json();
      const datas=await data.articles;
   //  console.log(datas);
